@@ -15,46 +15,58 @@ model = OpenAIModel(
 sqlQueryGeneratorAgent: Agent = Agent(
     model,
     name="SQL Query Generator",
-    system_prompt="You are in charge of generating an SQL query and only an SQL query, where the results should all be "
-                  "returned in a text format, avoiding completely using ```sql ``` in the output."
 )
 
 
 # Remove the previously generated queries section to prove that the same query would be generated 5 times
 @sqlQueryGeneratorAgent.system_prompt
 def system_prompt(ctx) -> str:
-    error = ctx.deps.get('error')  # Safely get the 'error' key
-    previous_queries = ctx.deps.get('previous_queries', [])
-    previous_queries_str = "\n".join(previous_queries)
+    error: None | str = ctx.deps.get('error')
+    failedQuery: None | str = ctx.deps.get('failed_query')
+
+    previousQueries = ctx.deps.get('previous_queries', [])
+    previousQueriesStr = "\n".join(previousQueries)
 
     if error:
         return f"""
-        To generate an SQL query, this is the prompt-query pairings: {ctx.deps['prompt_query_pairings']}
-        and the table schemas are: {ctx.deps['table_schemas']}.
-
-        While executing the previously generated query: {ctx.deps['previous_query']}, an error occurred: {error}.
-        Please fix the issues and regenerate the SQL query. The error message is: {error}.
-
-        Please generate a new SQL query that is different from the previously generated queries. Ensure the new query uses
-        different SQL constructs, joins, or conditions to achieve the same result.
-        {previous_queries_str}
+        You are an expert SQL assistant. Your job is to generate correct, syntactically valid, and semantically accurate SQL queries.
+        Only return the SQL query, without any additional text or explanation. Avoid using ```sql ``` or any other code formatting.
+    
+        CONTEXT:
+        - Prompt-query examples: {ctx.deps['prompt_query_pairings']}
+        - Table schemas: {ctx.deps['table_schemas']}
+        - The last query that failed: {failedQuery}
+        - Error message: {error}
+    
+        GUIDELINES:
+        1. Fix the issue from the last query based on the error.
+        2. Do NOT generate any queries that are the same or semantically similar to any of the following:
+        {previousQueriesStr}
+        3. If needed, reformulate the query to avoid repeating structure or logic while still satisfying the prompt.
+    
+        Now regenerate a new SQL query that fulfills the original user request, taking the above into account.
         """
     else:
         return f"""
-        To generate an SQL query, this is the prompt-query pairings: {ctx.deps['prompt_query_pairings']}
-        and the table schemas are: {ctx.deps['table_schemas']}.
-
-        Please generate a new SQL query that is different from the previously generated queries. Ensure the new query uses
-        different SQL constructs, joins, or conditions to achieve the same result.
-        {previous_queries_str}
+        You are an expert SQL assistant. Your job is to generate correct and semantically accurate SQL queries.
+        Only return the SQL query, without any additional text or explanation. Avoid using ```sql ``` or any other code formatting.
+    
+        CONTEXT:
+        - Prompt-query examples: {ctx.deps['prompt_query_pairings']}
+        - Table schemas: {ctx.deps['table_schemas']}
+    
+        GUIDELINES:
+        1. Generate a new SQL query that is NOT the same or semantically similar to any of the following:
+        {previousQueriesStr}
+        2. Reformulate the logic or structure if needed, while satisfying the prompt requirements.
+    
+        Now generate a new SQL query based on the latest prompt.
         """
 
 
 sqlQueryAccuracyJudgeAgent: Agent = Agent(
     model,
     name="SQL Query Accuracy Judge",
-    system_prompt="You are in charge of judging the accuracy of the following SQL query. Please return only an accuracy "
-                  "score from 0 to 1, and skip all the reasoning and explanation"
 )
 
 
