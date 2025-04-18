@@ -6,9 +6,9 @@ from pydantic_ai.models.openai import OpenAIModel
 
 load_dotenv()
 
-model = OpenAIModel(
-    # "gpt-4-turbo",
-    "gpt-3.5-turbo",
+model: OpenAIModel = OpenAIModel(
+    "gpt-4-turbo",
+    # "gpt-3.5-turbo",
     api_key=environ['OPENAIKEY']
 )
 
@@ -17,15 +17,14 @@ sqlQueryGeneratorAgent: Agent = Agent(
     name="SQL Query Generator",
 )
 
-
 # Remove the previously generated queries section to prove that the same query would be generated 5 times
 @sqlQueryGeneratorAgent.system_prompt
 def system_prompt(ctx) -> str:
     error: None | str = ctx.deps.get('error')
     failedQuery: None | str = ctx.deps.get('failed_query')
 
-    previousQueries = ctx.deps.get('previous_queries', [])
-    previousQueriesStr = "\n".join(previousQueries)
+    previousQueries: list = ctx.deps.get('previous_queries', [])
+    previousQueriesStr: str = "\n".join(previousQueries)
 
     if error:
         return f"""
@@ -68,7 +67,6 @@ sqlQueryAccuracyJudgeAgent: Agent = Agent(
     model,
     name="SQL Query Accuracy Judge",
 )
-
 
 @sqlQueryAccuracyJudgeAgent.system_prompt
 def system_prompt(ctx) -> str:
