@@ -10,6 +10,20 @@ from agents import sqlQueryGeneratorAgent, sqlQueryAccuracyJudgeAgent
 from fetch_examples import getTopSentenceMatches, fetchUsedTables, fetchSentencePairing, fetchTableSchemas, \
     loadSentences
 
+
+def isQuerySafeToExecute(query: str) -> bool:
+    """
+    Function to determine if a query is safe to execute (won't delete or modify any of the underlying data).
+    :param query: The query to analyze
+    :return: The boolean value indicating if the query is safe to execute
+    """
+    restrictedKeywords: list = [
+        "DELETE", "DROP", "TRUNCATE", "ALTER", "INSERT", "UPDATE", "REPLACE", "MERGE"
+    ]
+
+    return all(keyword not in query.upper() for keyword in restrictedKeywords)
+
+
 # Page config
 st.set_page_config(page_title="Pydantic AI Chatbot", layout="wide")
 st.title("🤖 Pydantic AI Chatbot")
@@ -22,7 +36,6 @@ if "messages" not in st.session_state or not st.session_state.get("messages"):
     st.session_state.messages = []
 if "previous_queries" not in st.session_state:
     st.session_state.previous_queries = []
-
 if clearButton:
     st.session_state.messages = []
 
@@ -109,38 +122,53 @@ if userInput:
                     feedback: str = ""
 
                 if accuracyScore >= 0.6:
-                    try:
-                        conn = sqlite3.connect(dbOptions[selectedDb]['path'])
-                        cursor = conn.cursor()
-
-                        # Measure execution time
-                        startTime = time()
-                        cursor.execute(cleanedQuery)
-                        results = cursor.fetchall()
-                        executionTime = time() - startTime
-
-                        conn.close()
-
-                        # Convert results to DataFrame and display
-                        df = DataFrame(results, columns=[desc[0] for desc in cursor.description])
-
+                    if not isQuerySafeToExecute(cleanedQuery):
                         col1, col2 = st.columns([1, 2])
                         with col1:
                             st.markdown("### Query")
                             st.code(cleanedQuery, language='sql')
-                        with col2:
-                            st.markdown("### Query Results")
-                            st.dataframe(df.head())
 
-                        st.markdown(f"Accuracy Score: {accuracyScore} | Execution Time: {executionTime:.2f} seconds")
-                        previouslyGeneratedQueries.append(cleanedQuery)
+                        with col2:
+                            st.markdown("### Warning")
+                            st.markdown(
+                                "Due to the nature of the query to be executed, the system can not show what the results would be.")
+
+                        st.markdown(f"Accuracy Score: {accuracyScore}")
                         break
 
-                    # Possible SQL error
-                    except Exception as e:
-                        retries -= 1
-                        error = f"The following SQL error occurred when executing the query: {str(e)}"
-                        failedQuery = cleanedQuery
+                    else:
+                        try:
+                            conn = sqlite3.connect(dbOptions[selectedDb]['path'])
+                            cursor = conn.cursor()
+
+                            # Measure execution time
+                            startTime = time()
+                            cursor.execute(cleanedQuery)
+                            results = cursor.fetchall()
+                            executionTime = time() - startTime
+
+                            conn.close()
+
+                            # Convert results to DataFrame and display
+                            df = DataFrame(results, columns=[desc[0] for desc in cursor.description])
+
+                            col1, col2 = st.columns([1, 2])
+                            with col1:
+                                st.markdown("### Query")
+                                st.code(cleanedQuery, language='sql')
+                            with col2:
+                                st.markdown("### Query Results")
+                                st.dataframe(df.head())
+
+                            st.markdown(f"Accuracy Score: {accuracyScore} | Execution Time: {executionTime:.2f} seconds")
+                            previouslyGeneratedQueries.append(cleanedQuery)
+                            break
+
+                        # Possible SQL error
+                        except Exception as e:
+                            retries -= 1
+                            error = f"The following SQL error occurred when executing the query: {str(e)}"
+                            failedQuery = cleanedQuery
 
                 # Confidence score too low
                 else:
