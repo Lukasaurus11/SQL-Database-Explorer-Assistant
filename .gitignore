@@ -5,5 +5,5 @@ raw/spider_data/
 .env
 __pycache__/
 databases/
-tests/
 *.pkl
+raw/

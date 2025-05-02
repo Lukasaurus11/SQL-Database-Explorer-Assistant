@@ -1,0 +1,32 @@
+{
+    "simple": {
+        "results": {
+            "failed": 5,
+            "passed": 22
+        },
+        "correctlyGeneratedQueries": {
+            "failed": 6,
+            "passed": 21
+        }
+    },
+    "complex": {
+        "results": {
+            "failed": 10,
+            "passed": 19
+        },
+        "correctlyGeneratedQueries": {
+            "failed": 4,
+            "passed": 25
+        }
+    },
+    "multi-table": {
+        "results": {
+            "failed": 24,
+            "passed": 17
+        },
+        "correctlyGeneratedQueries": {
+            "failed": 4,
+            "passed": 37
+        }
+    }
+}

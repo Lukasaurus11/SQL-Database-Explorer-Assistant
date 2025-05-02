@@ -1,0 +1,12 @@
+{
+    "accuracy_seed1": "57.14%",
+    "accuracy_seed5": "52.38%",
+    "accuracy_seed10": "57.14%",
+    "accuracy_seed19": "61.90%",
+    "accuracy_seed42": "47.62%",
+    "accuracy_test": "55.24%",
+    "generation_failure_rate": "7.62%",
+    "average_execution_time": "0.00s",
+    "average_tokens_used": "764.64",
+    "average_confidence_score": "0.87"
+}

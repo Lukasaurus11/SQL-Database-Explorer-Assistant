@@ -1,0 +1,2341 @@
+[
+    {
+        "question": "List the id, flavor and type of food of goods ordered by price.",
+        "generated": "SELECT id, flavor, food \nFROM goods \nORDER BY price;",
+        "test": "SELECT id ,  flavor ,  food FROM goods ORDER BY price",
+        "generated_results": [
+            [
+                "70-LEM",
+                "Lemon",
+                "Cookie"
+            ],
+            [
+                "70-W",
+                "Walnut",
+                "Cookie"
+            ],
+            [
+                "70-R",
+                "Raspberry",
+                "Cookie"
+            ],
+            [
+                "70-GA",
+                "Ganache",
+                "Cookie"
+            ],
+            [
+                "70-GON",
+                "Gongolais",
+                "Cookie"
+            ],
+            [
+                "70-M-VA-SM-DZ",
+                "Vanilla",
+                "Meringue"
+            ],
+            [
+                "51-APR",
+                "Apricot",
+                "Danish"
+            ],
+            [
+                "51-APP",
+                "Apple",
+                "Danish"
+            ],
+            [
+                "51-ATW",
+                "Almond",
+                "Twist"
+            ],
+            [
+                "51-BLU",
+                "Blueberry",
+                "Danish"
+            ],
+            [
+                "70-M-CH-DZ",
+                "Chocolate",
+                "Meringue"
+            ],
+            [
+                "70-MAR",
+                "Marzipan",
+                "Cookie"
+            ],
+            [
+                "70-TU",
+                "Tuile",
+                "Cookie"
+            ],
+            [
+                "50-ALM",
+                "Almond",
+                "Croissant"
+            ],
+            [
+                "50-APP",
+                "Apple",
+                "Croissant"
+            ],
+            [
+                "50-APR",
+                "Apricot",
+                "Croissant"
+            ],
+            [
+                "50-CHS",
+                "Cheese",
+                "Croissant"
+            ],
+            [
+                "50-CH",
+                "Chocolate",
+                "Croissant"
+            ],
+            [
+                "51-BC",
+                "Almond",
+                "Bear Claw"
+            ],
+            [
+                "45-CH",
+                "Chocolate",
+                "Eclair"
+            ],
+            [
+                "45-VA",
+                "Vanilla",
+                "Eclair"
+            ],
+            [
+                "90-APP-11",
+                "Apple",
+                "Tart"
+            ],
+            [
+                "90-APR-PF",
+                "Apricot",
+                "Tart"
+            ],
+            [
+                "90-BER-11",
+                "Berry",
+                "Tart"
+            ],
+            [
+                "90-BLK-PF",
+                "Blackberry",
+                "Tart"
+            ],
+            [
+                "90-BLU-11",
+                "Blueberry",
+                "Tart"
+            ],
+            [
+                "90-CHR-11",
+                "Cherry",
+                "Tart"
+            ],
+            [
+                "90-LEM-11",
+                "Lemon",
+                "Tart"
+            ],
+            [
+                "45-CO",
+                "Coffee",
+                "Eclair"
+            ],
+            [
+                "90-ALM-I",
+                "Almond",
+                "Tart"
+            ],
+            [
+                "90-CH-PF",
+                "Chocolate",
+                "Tart"
+            ],
+            [
+                "90-PEC-11",
+                "Pecan",
+                "Tart"
+            ],
+            [
+                "90-APIE-10",
+                "Apple",
+                "Pie"
+            ],
+            [
+                "20-BC-C-10",
+                "Chocolate",
+                "Cake"
+            ],
+            [
+                "20-BC-L-10",
+                "Lemon",
+                "Cake"
+            ],
+            [
+                "25-STR-9",
+                "Strawberry",
+                "Cake"
+            ],
+            [
+                "46-11",
+                "Napoleon",
+                "Cake"
+            ],
+            [
+                "20-CA-7.5",
+                "Casino",
+                "Cake"
+            ],
+            [
+                "24-8x10",
+                "Opera",
+                "Cake"
+            ],
+            [
+                "26-8x10",
+                "Truffle",
+                "Cake"
+            ]
+        ],
+        "test_results": [
+            [
+                "70-LEM",
+                "Lemon",
+                "Cookie"
+            ],
+            [
+                "70-W",
+                "Walnut",
+                "Cookie"
+            ],
+            [
+                "70-R",
+                "Raspberry",
+                "Cookie"
+            ],
+            [
+                "70-GA",
+                "Ganache",
+                "Cookie"
+            ],
+            [
+                "70-GON",
+                "Gongolais",
+                "Cookie"
+            ],
+            [
+                "70-M-VA-SM-DZ",
+                "Vanilla",
+                "Meringue"
+            ],
+            [
+                "51-APR",
+                "Apricot",
+                "Danish"
+            ],
+            [
+                "51-APP",
+                "Apple",
+                "Danish"
+            ],
+            [
+                "51-ATW",
+                "Almond",
+                "Twist"
+            ],
+            [
+                "51-BLU",
+                "Blueberry",
+                "Danish"
+            ],
+            [
+                "70-M-CH-DZ",
+                "Chocolate",
+                "Meringue"
+            ],
+            [
+                "70-MAR",
+                "Marzipan",
+                "Cookie"
+            ],
+            [
+                "70-TU",
+                "Tuile",
+                "Cookie"
+            ],
+            [
+                "50-ALM",
+                "Almond",
+                "Croissant"
+            ],
+            [
+                "50-APP",
+                "Apple",
+                "Croissant"
+            ],
+            [
+                "50-APR",
+                "Apricot",
+                "Croissant"
+            ],
+            [
+                "50-CHS",
+                "Cheese",
+                "Croissant"
+            ],
+            [
+                "50-CH",
+                "Chocolate",
+                "Croissant"
+            ],
+            [
+                "51-BC",
+                "Almond",
+                "Bear Claw"
+            ],
+            [
+                "45-CH",
+                "Chocolate",
+                "Eclair"
+            ],
+            [
+                "45-VA",
+                "Vanilla",
+                "Eclair"
+            ],
+            [
+                "90-APP-11",
+                "Apple",
+                "Tart"
+            ],
+            [
+                "90-APR-PF",
+                "Apricot",
+                "Tart"
+            ],
+            [
+                "90-BER-11",
+                "Berry",
+                "Tart"
+            ],
+            [
+                "90-BLK-PF",
+                "Blackberry",
+                "Tart"
+            ],
+            [
+                "90-BLU-11",
+                "Blueberry",
+                "Tart"
+            ],
+            [
+                "90-CHR-11",
+                "Cherry",
+                "Tart"
+            ],
+            [
+                "90-LEM-11",
+                "Lemon",
+                "Tart"
+            ],
+            [
+                "45-CO",
+                "Coffee",
+                "Eclair"
+            ],
+            [
+                "90-ALM-I",
+                "Almond",
+                "Tart"
+            ],
+            [
+                "90-CH-PF",
+                "Chocolate",
+                "Tart"
+            ],
+            [
+                "90-PEC-11",
+                "Pecan",
+                "Tart"
+            ],
+            [
+                "90-APIE-10",
+                "Apple",
+                "Pie"
+            ],
+            [
+                "20-BC-C-10",
+                "Chocolate",
+                "Cake"
+            ],
+            [
+                "20-BC-L-10",
+                "Lemon",
+                "Cake"
+            ],
+            [
+                "25-STR-9",
+                "Strawberry",
+                "Cake"
+            ],
+            [
+                "46-11",
+                "Napoleon",
+                "Cake"
+            ],
+            [
+                "20-CA-7.5",
+                "Casino",
+                "Cake"
+            ],
+            [
+                "24-8x10",
+                "Opera",
+                "Cake"
+            ],
+            [
+                "26-8x10",
+                "Truffle",
+                "Cake"
+            ]
+        ],
+        "match": true,
+        "confidence_score": 0.4,
+        "execution_time": 0.0,
+        "generation_tokens": 566,
+        "judging_tokens": 183,
+        "generation_failed": false
+    },
+    {
+        "question": "What is the average price for each food type?",
+        "generated": "SELECT food, AVG(price) AS average_price FROM goods GROUP BY food",
+        "test": "SELECT avg(price) ,  food FROM goods GROUP BY food",
+        "generated_results": [
+            [
+                "Bear Claw",
+                1.95
+            ],
+            [
+                "Cake",
+                13.027142857142858
+            ],
+            [
+                "Cookie",
+                1.0671428571428572
+            ],
+            [
+                "Croissant",
+                1.5699999999999998
+            ],
+            [
+                "Danish",
+                1.15
+            ],
+            [
+                "Eclair",
+                3.3333333333333335
+            ],
+            [
+                "Meringue",
+                1.2
+            ],
+            [
+                "Pie",
+                5.25
+            ],
+            [
+                "Tart",
+                3.4
+            ],
+            [
+                "Twist",
+                1.15
+            ]
+        ],
+        "test_results": [
+            [
+                1.95,
+                "Bear Claw"
+            ],
+            [
+                13.027142857142858,
+                "Cake"
+            ],
+            [
+                1.0671428571428572,
+                "Cookie"
+            ],
+            [
+                1.5699999999999998,
+                "Croissant"
+            ],
+            [
+                1.15,
+                "Danish"
+            ],
+            [
+                3.3333333333333335,
+                "Eclair"
+            ],
+            [
+                1.2,
+                "Meringue"
+            ],
+            [
+                5.25,
+                "Pie"
+            ],
+            [
+                3.4,
+                "Tart"
+            ],
+            [
+                1.15,
+                "Twist"
+            ]
+        ],
+        "match": false,
+        "confidence_score": 1.0,
+        "execution_time": 0.0010056495666503906,
+        "generation_tokens": 625,
+        "judging_tokens": 163,
+        "generation_failed": false
+    },
+    {
+        "question": "What are the distinct ids and prices for goods that cost less than the average good?",
+        "generated": "SELECT DISTINCT id, price FROM goods WHERE price < (SELECT AVG(price) FROM goods)",
+        "test": "SELECT DISTINCT id ,  price FROM goods WHERE price  <  (SELECT avg(price) FROM goods)",
+        "generated_results": [
+            [
+                "45-CH",
+                3.25
+            ],
+            [
+                "45-CO",
+                3.5
+            ],
+            [
+                "45-VA",
+                3.25
+            ],
+            [
+                "50-ALM",
+                1.45
+            ],
+            [
+                "50-APP",
+                1.45
+            ],
+            [
+                "50-APR",
+                1.45
+            ],
+            [
+                "50-CH",
+                1.75
+            ],
+            [
+                "50-CHS",
+                1.75
+            ],
+            [
+                "51-APP",
+                1.15
+            ],
+            [
+                "51-APR",
+                1.15
+            ],
+            [
+                "51-ATW",
+                1.15
+            ],
+            [
+                "51-BC",
+                1.95
+            ],
+            [
+                "51-BLU",
+                1.15
+            ],
+            [
+                "70-GA",
+                1.15
+            ],
+            [
+                "70-GON",
+                1.15
+            ],
+            [
+                "70-LEM",
+                0.79
+            ],
+            [
+                "70-M-CH-DZ",
+                1.25
+            ],
+            [
+                "70-M-VA-SM-DZ",
+                1.15
+            ],
+            [
+                "70-MAR",
+                1.25
+            ],
+            [
+                "70-R",
+                1.09
+            ],
+            [
+                "70-TU",
+                1.25
+            ],
+            [
+                "70-W",
+                0.79
+            ],
+            [
+                "90-ALM-I",
+                3.75
+            ],
+            [
+                "90-APP-11",
+                3.25
+            ],
+            [
+                "90-APR-PF",
+                3.25
+            ],
+            [
+                "90-BER-11",
+                3.25
+            ],
+            [
+                "90-BLK-PF",
+                3.25
+            ],
+            [
+                "90-BLU-11",
+                3.25
+            ],
+            [
+                "90-CH-PF",
+                3.75
+            ],
+            [
+                "90-CHR-11",
+                3.25
+            ],
+            [
+                "90-LEM-11",
+                3.25
+            ],
+            [
+                "90-PEC-11",
+                3.75
+            ]
+        ],
+        "test_results": [
+            [
+                "45-CH",
+                3.25
+            ],
+            [
+                "45-CO",
+                3.5
+            ],
+            [
+                "45-VA",
+                3.25
+            ],
+            [
+                "50-ALM",
+                1.45
+            ],
+            [
+                "50-APP",
+                1.45
+            ],
+            [
+                "50-APR",
+                1.45
+            ],
+            [
+                "50-CH",
+                1.75
+            ],
+            [
+                "50-CHS",
+                1.75
+            ],
+            [
+                "51-APP",
+                1.15
+            ],
+            [
+                "51-APR",
+                1.15
+            ],
+            [
+                "51-ATW",
+                1.15
+            ],
+            [
+                "51-BC",
+                1.95
+            ],
+            [
+                "51-BLU",
+                1.15
+            ],
+            [
+                "70-GA",
+                1.15
+            ],
+            [
+                "70-GON",
+                1.15
+            ],
+            [
+                "70-LEM",
+                0.79
+            ],
+            [
+                "70-M-CH-DZ",
+                1.25
+            ],
+            [
+                "70-M-VA-SM-DZ",
+                1.15
+            ],
+            [
+                "70-MAR",
+                1.25
+            ],
+            [
+                "70-R",
+                1.09
+            ],
+            [
+                "70-TU",
+                1.25
+            ],
+            [
+                "70-W",
+                0.79
+            ],
+            [
+                "90-ALM-I",
+                3.75
+            ],
+            [
+                "90-APP-11",
+                3.25
+            ],
+            [
+                "90-APR-PF",
+                3.25
+            ],
+            [
+                "90-BER-11",
+                3.25
+            ],
+            [
+                "90-BLK-PF",
+                3.25
+            ],
+            [
+                "90-BLU-11",
+                3.25
+            ],
+            [
+                "90-CH-PF",
+                3.75
+            ],
+            [
+                "90-CHR-11",
+                3.25
+            ],
+            [
+                "90-LEM-11",
+                3.25
+            ],
+            [
+                "90-PEC-11",
+                3.75
+            ]
+        ],
+        "match": true,
+        "confidence_score": 1.0,
+        "execution_time": 0.0009992122650146484,
+        "generation_tokens": 735,
+        "judging_tokens": 174,
+        "generation_failed": false
+    },
+    {
+        "question": "List the last names of all customers in an alphabetical order.",
+        "generated": "SELECT LastName FROM customers ORDER BY LastName",
+        "test": "SELECT DISTINCT LastName FROM customers ORDER BY LastName",
+        "generated_results": [
+            [
+                "ARNN"
+            ],
+            [
+                "ARZT"
+            ],
+            [
+                "CALLENDAR"
+            ],
+            [
+                "CRUZEN"
+            ],
+            [
+                "DOMKOWSKI"
+            ],
+            [
+                "DUKELOW"
+            ],
+            [
+                "DUNLOW"
+            ],
+            [
+                "ENGLEY"
+            ],
+            [
+                "ESPOSITA"
+            ],
+            [
+                "HAFFERKAMP"
+            ],
+            [
+                "HELING"
+            ],
+            [
+                "LOGAN"
+            ],
+            [
+                "MCMAHAN"
+            ],
+            [
+                "MESDAQ"
+            ],
+            [
+                "SLINGLAND"
+            ],
+            [
+                "SOPKO"
+            ],
+            [
+                "STADICK"
+            ],
+            [
+                "STENZ"
+            ],
+            [
+                "TOUSSAND"
+            ],
+            [
+                "ZEME"
+            ]
+        ],
+        "test_results": [
+            [
+                "ARNN"
+            ],
+            [
+                "ARZT"
+            ],
+            [
+                "CALLENDAR"
+            ],
+            [
+                "CRUZEN"
+            ],
+            [
+                "DOMKOWSKI"
+            ],
+            [
+                "DUKELOW"
+            ],
+            [
+                "DUNLOW"
+            ],
+            [
+                "ENGLEY"
+            ],
+            [
+                "ESPOSITA"
+            ],
+            [
+                "HAFFERKAMP"
+            ],
+            [
+                "HELING"
+            ],
+            [
+                "LOGAN"
+            ],
+            [
+                "MCMAHAN"
+            ],
+            [
+                "MESDAQ"
+            ],
+            [
+                "SLINGLAND"
+            ],
+            [
+                "SOPKO"
+            ],
+            [
+                "STADICK"
+            ],
+            [
+                "STENZ"
+            ],
+            [
+                "TOUSSAND"
+            ],
+            [
+                "ZEME"
+            ]
+        ],
+        "match": true,
+        "confidence_score": 1.0,
+        "execution_time": 0.0,
+        "generation_tokens": 679,
+        "judging_tokens": 158,
+        "generation_failed": false
+    },
+    {
+        "question": "What are the ids, flavors, and food types of goods, ordered by price?",
+        "generated": "SELECT id, flavor, food FROM goods ORDER BY price",
+        "test": "SELECT id ,  flavor ,  food FROM goods ORDER BY price",
+        "generated_results": [
+            [
+                "70-LEM",
+                "Lemon",
+                "Cookie"
+            ],
+            [
+                "70-W",
+                "Walnut",
+                "Cookie"
+            ],
+            [
+                "70-R",
+                "Raspberry",
+                "Cookie"
+            ],
+            [
+                "70-GA",
+                "Ganache",
+                "Cookie"
+            ],
+            [
+                "70-GON",
+                "Gongolais",
+                "Cookie"
+            ],
+            [
+                "70-M-VA-SM-DZ",
+                "Vanilla",
+                "Meringue"
+            ],
+            [
+                "51-APR",
+                "Apricot",
+                "Danish"
+            ],
+            [
+                "51-APP",
+                "Apple",
+                "Danish"
+            ],
+            [
+                "51-ATW",
+                "Almond",
+                "Twist"
+            ],
+            [
+                "51-BLU",
+                "Blueberry",
+                "Danish"
+            ],
+            [
+                "70-M-CH-DZ",
+                "Chocolate",
+                "Meringue"
+            ],
+            [
+                "70-MAR",
+                "Marzipan",
+                "Cookie"
+            ],
+            [
+                "70-TU",
+                "Tuile",
+                "Cookie"
+            ],
+            [
+                "50-ALM",
+                "Almond",
+                "Croissant"
+            ],
+            [
+                "50-APP",
+                "Apple",
+                "Croissant"
+            ],
+            [
+                "50-APR",
+                "Apricot",
+                "Croissant"
+            ],
+            [
+                "50-CHS",
+                "Cheese",
+                "Croissant"
+            ],
+            [
+                "50-CH",
+                "Chocolate",
+                "Croissant"
+            ],
+            [
+                "51-BC",
+                "Almond",
+                "Bear Claw"
+            ],
+            [
+                "45-CH",
+                "Chocolate",
+                "Eclair"
+            ],
+            [
+                "45-VA",
+                "Vanilla",
+                "Eclair"
+            ],
+            [
+                "90-APP-11",
+                "Apple",
+                "Tart"
+            ],
+            [
+                "90-APR-PF",
+                "Apricot",
+                "Tart"
+            ],
+            [
+                "90-BER-11",
+                "Berry",
+                "Tart"
+            ],
+            [
+                "90-BLK-PF",
+                "Blackberry",
+                "Tart"
+            ],
+            [
+                "90-BLU-11",
+                "Blueberry",
+                "Tart"
+            ],
+            [
+                "90-CHR-11",
+                "Cherry",
+                "Tart"
+            ],
+            [
+                "90-LEM-11",
+                "Lemon",
+                "Tart"
+            ],
+            [
+                "45-CO",
+                "Coffee",
+                "Eclair"
+            ],
+            [
+                "90-ALM-I",
+                "Almond",
+                "Tart"
+            ],
+            [
+                "90-CH-PF",
+                "Chocolate",
+                "Tart"
+            ],
+            [
+                "90-PEC-11",
+                "Pecan",
+                "Tart"
+            ],
+            [
+                "90-APIE-10",
+                "Apple",
+                "Pie"
+            ],
+            [
+                "20-BC-C-10",
+                "Chocolate",
+                "Cake"
+            ],
+            [
+                "20-BC-L-10",
+                "Lemon",
+                "Cake"
+            ],
+            [
+                "25-STR-9",
+                "Strawberry",
+                "Cake"
+            ],
+            [
+                "46-11",
+                "Napoleon",
+                "Cake"
+            ],
+            [
+                "20-CA-7.5",
+                "Casino",
+                "Cake"
+            ],
+            [
+                "24-8x10",
+                "Opera",
+                "Cake"
+            ],
+            [
+                "26-8x10",
+                "Truffle",
+                "Cake"
+            ]
+        ],
+        "test_results": [
+            [
+                "70-LEM",
+                "Lemon",
+                "Cookie"
+            ],
+            [
+                "70-W",
+                "Walnut",
+                "Cookie"
+            ],
+            [
+                "70-R",
+                "Raspberry",
+                "Cookie"
+            ],
+            [
+                "70-GA",
+                "Ganache",
+                "Cookie"
+            ],
+            [
+                "70-GON",
+                "Gongolais",
+                "Cookie"
+            ],
+            [
+                "70-M-VA-SM-DZ",
+                "Vanilla",
+                "Meringue"
+            ],
+            [
+                "51-APR",
+                "Apricot",
+                "Danish"
+            ],
+            [
+                "51-APP",
+                "Apple",
+                "Danish"
+            ],
+            [
+                "51-ATW",
+                "Almond",
+                "Twist"
+            ],
+            [
+                "51-BLU",
+                "Blueberry",
+                "Danish"
+            ],
+            [
+                "70-M-CH-DZ",
+                "Chocolate",
+                "Meringue"
+            ],
+            [
+                "70-MAR",
+                "Marzipan",
+                "Cookie"
+            ],
+            [
+                "70-TU",
+                "Tuile",
+                "Cookie"
+            ],
+            [
+                "50-ALM",
+                "Almond",
+                "Croissant"
+            ],
+            [
+                "50-APP",
+                "Apple",
+                "Croissant"
+            ],
+            [
+                "50-APR",
+                "Apricot",
+                "Croissant"
+            ],
+            [
+                "50-CHS",
+                "Cheese",
+                "Croissant"
+            ],
+            [
+                "50-CH",
+                "Chocolate",
+                "Croissant"
+            ],
+            [
+                "51-BC",
+                "Almond",
+                "Bear Claw"
+            ],
+            [
+                "45-CH",
+                "Chocolate",
+                "Eclair"
+            ],
+            [
+                "45-VA",
+                "Vanilla",
+                "Eclair"
+            ],
+            [
+                "90-APP-11",
+                "Apple",
+                "Tart"
+            ],
+            [
+                "90-APR-PF",
+                "Apricot",
+                "Tart"
+            ],
+            [
+                "90-BER-11",
+                "Berry",
+                "Tart"
+            ],
+            [
+                "90-BLK-PF",
+                "Blackberry",
+                "Tart"
+            ],
+            [
+                "90-BLU-11",
+                "Blueberry",
+                "Tart"
+            ],
+            [
+                "90-CHR-11",
+                "Cherry",
+                "Tart"
+            ],
+            [
+                "90-LEM-11",
+                "Lemon",
+                "Tart"
+            ],
+            [
+                "45-CO",
+                "Coffee",
+                "Eclair"
+            ],
+            [
+                "90-ALM-I",
+                "Almond",
+                "Tart"
+            ],
+            [
+                "90-CH-PF",
+                "Chocolate",
+                "Tart"
+            ],
+            [
+                "90-PEC-11",
+                "Pecan",
+                "Tart"
+            ],
+            [
+                "90-APIE-10",
+                "Apple",
+                "Pie"
+            ],
+            [
+                "20-BC-C-10",
+                "Chocolate",
+                "Cake"
+            ],
+            [
+                "20-BC-L-10",
+                "Lemon",
+                "Cake"
+            ],
+            [
+                "25-STR-9",
+                "Strawberry",
+                "Cake"
+            ],
+            [
+                "46-11",
+                "Napoleon",
+                "Cake"
+            ],
+            [
+                "20-CA-7.5",
+                "Casino",
+                "Cake"
+            ],
+            [
+                "24-8x10",
+                "Opera",
+                "Cake"
+            ],
+            [
+                "26-8x10",
+                "Truffle",
+                "Cake"
+            ]
+        ],
+        "match": true,
+        "confidence_score": 0.2,
+        "execution_time": 0.001008749008178711,
+        "generation_tokens": 546,
+        "judging_tokens": 176,
+        "generation_failed": false
+    },
+    {
+        "question": "What are the customer ids of customers who have at least 15 receipts?",
+        "generated": "SELECT CustomerId \nFROM receipts \nGROUP BY CustomerId \nHAVING COUNT(ReceiptNumber) >= 15",
+        "test": "SELECT CustomerId FROM receipts GROUP BY CustomerId HAVING count(*)  >=  15",
+        "generated_results": [
+            [
+                6
+            ],
+            [
+                7
+            ],
+            [
+                8
+            ],
+            [
+                14
+            ],
+            [
+                20
+            ]
+        ],
+        "test_results": [
+            [
+                6
+            ],
+            [
+                7
+            ],
+            [
+                8
+            ],
+            [
+                14
+            ],
+            [
+                20
+            ]
+        ],
+        "match": true,
+        "confidence_score": 1.0,
+        "execution_time": 0.0010061264038085938,
+        "generation_tokens": 1031,
+        "judging_tokens": 176,
+        "generation_failed": false
+    },
+    {
+        "question": "Count the number of goods for each food type.",
+        "generated": "SELECT food, COUNT(*) AS num_goods FROM goods GROUP BY food",
+        "test": "SELECT count(*) ,  food FROM goods GROUP BY food",
+        "generated_results": [
+            [
+                "Bear Claw",
+                1
+            ],
+            [
+                "Cake",
+                7
+            ],
+            [
+                "Cookie",
+                7
+            ],
+            [
+                "Croissant",
+                5
+            ],
+            [
+                "Danish",
+                3
+            ],
+            [
+                "Eclair",
+                3
+            ],
+            [
+                "Meringue",
+                2
+            ],
+            [
+                "Pie",
+                1
+            ],
+            [
+                "Tart",
+                10
+            ],
+            [
+                "Twist",
+                1
+            ]
+        ],
+        "test_results": [
+            [
+                1,
+                "Bear Claw"
+            ],
+            [
+                7,
+                "Cake"
+            ],
+            [
+                7,
+                "Cookie"
+            ],
+            [
+                5,
+                "Croissant"
+            ],
+            [
+                3,
+                "Danish"
+            ],
+            [
+                3,
+                "Eclair"
+            ],
+            [
+                2,
+                "Meringue"
+            ],
+            [
+                1,
+                "Pie"
+            ],
+            [
+                10,
+                "Tart"
+            ],
+            [
+                1,
+                "Twist"
+            ]
+        ],
+        "match": false,
+        "confidence_score": 1.0,
+        "execution_time": 0.0009999275207519531,
+        "generation_tokens": 557,
+        "judging_tokens": 162,
+        "generation_failed": false
+    },
+    {
+        "question": "Which customer shopped most often? How many times?",
+        "generated": "SELECT T2.FirstName, T2.LastName, count(T1.ReceiptNumber) AS TotalVisits\nFROM receipts AS T1\nJOIN customers AS T2 ON T1.CustomerId = T2.Id\nGROUP BY T1.CustomerId\nORDER BY TotalVisits DESC\nLIMIT 1",
+        "test": "SELECT CustomerId ,  count(*) FROM receipts GROUP BY CustomerId ORDER BY count(*) DESC LIMIT 1",
+        "generated_results": [
+            [
+                "RUPERT",
+                "HELING",
+                18
+            ]
+        ],
+        "test_results": [
+            [
+                8,
+                18
+            ]
+        ],
+        "match": false,
+        "confidence_score": 0.9,
+        "execution_time": 0.0,
+        "generation_tokens": 673,
+        "judging_tokens": 211,
+        "generation_failed": false
+    },
+    {
+        "question": "List all the flavors of Croissant available in this bakery.",
+        "generated": "SELECT flavor FROM goods WHERE food = 'Croissant'",
+        "test": "SELECT flavor FROM goods WHERE food  =  \"Croissant\"",
+        "generated_results": [
+            [
+                "Almond"
+            ],
+            [
+                "Apple"
+            ],
+            [
+                "Apricot"
+            ],
+            [
+                "Cheese"
+            ],
+            [
+                "Chocolate"
+            ]
+        ],
+        "test_results": [
+            [
+                "Almond"
+            ],
+            [
+                "Apple"
+            ],
+            [
+                "Apricot"
+            ],
+            [
+                "Cheese"
+            ],
+            [
+                "Chocolate"
+            ]
+        ],
+        "match": true,
+        "confidence_score": 1.0,
+        "execution_time": 0.0005040168762207031,
+        "generation_tokens": 760,
+        "judging_tokens": 162,
+        "generation_failed": false
+    },
+    {
+        "question": "Find the top three dates with the most receipts.",
+        "generated": "SELECT Date FROM receipts GROUP BY Date ORDER BY COUNT(ReceiptNumber) DESC LIMIT 3",
+        "test": "SELECT date FROM receipts GROUP BY date ORDER BY count(*) DESC LIMIT 3",
+        "generated_results": [
+            [
+                "12-Oct-2007"
+            ],
+            [
+                "9-Oct-2007"
+            ],
+            [
+                "7-Oct-2007"
+            ]
+        ],
+        "test_results": [
+            [
+                "12-Oct-2007"
+            ],
+            [
+                "9-Oct-2007"
+            ],
+            [
+                "7-Oct-2007"
+            ]
+        ],
+        "match": true,
+        "confidence_score": 0.9,
+        "execution_time": 0.0009906291961669922,
+        "generation_tokens": 614,
+        "judging_tokens": 169,
+        "generation_failed": false
+    },
+    {
+        "question": "Give the ids for goods that have Apricot flavor and have a price lower than 5 dollars.",
+        "generated": "SELECT Id FROM goods WHERE Flavor = \"Apricot\" AND Price < 5;",
+        "test": "SELECT id FROM goods WHERE flavor  =  \"Apricot\" AND price  <  5",
+        "generated_results": [
+            [
+                "90-APR-PF"
+            ],
+            [
+                "50-APR"
+            ],
+            [
+                "51-APR"
+            ]
+        ],
+        "test_results": [
+            [
+                "90-APR-PF"
+            ],
+            [
+                "50-APR"
+            ],
+            [
+                "51-APR"
+            ]
+        ],
+        "match": true,
+        "confidence_score": 1.0,
+        "execution_time": 0.0010039806365966797,
+        "generation_tokens": 439,
+        "judging_tokens": 176,
+        "generation_failed": false
+    },
+    {
+        "question": "What are the average prices of goods with blackberry or blueberry flavor?",
+        "generated": "SELECT AVG(price) AS average_price\nFROM goods\nWHERE flavor IN ('blackberry', 'blueberry')",
+        "test": "SELECT avg(price) FROM goods WHERE flavor  =  \"Blackberry\" OR flavor  =  \"Blueberry\"",
+        "generated_results": [
+            [
+                null
+            ]
+        ],
+        "test_results": [
+            [
+                2.5500000000000003
+            ]
+        ],
+        "match": false,
+        "confidence_score": 1.0,
+        "execution_time": 0.0010051727294921875,
+        "generation_tokens": 438,
+        "judging_tokens": 176,
+        "generation_failed": false
+    },
+    {
+        "question": "List distinct receipt numbers for which someone bought a good that costs more than 13 dollars.",
+        "generated": "SELECT DISTINCT receipts.ReceiptNumber\nFROM receipts\nWHERE ReceiptNumber IN (\n    SELECT receipt\n    FROM items\n    WHERE item IN (\n        SELECT Id\n        FROM goods\n        WHERE Price > 13\n    )\n);",
+        "test": "SELECT DISTINCT T1.ReceiptNumber FROM receipts AS T1 JOIN items AS T2 ON T1.ReceiptNumber  =  T2.receipt JOIN goods AS T3 ON T2.item  =  T3.id WHERE T3.price  >  13",
+        "generated_results": [
+            [
+                11891
+            ],
+            [
+                12396
+            ],
+            [
+                12698
+            ],
+            [
+                12800
+            ],
+            [
+                13355
+            ],
+            [
+                16034
+            ],
+            [
+                16532
+            ],
+            [
+                17729
+            ],
+            [
+                19002
+            ],
+            [
+                24829
+            ],
+            [
+                26148
+            ],
+            [
+                26240
+            ],
+            [
+                32701
+            ],
+            [
+                33060
+            ],
+            [
+                33456
+            ],
+            [
+                34579
+            ],
+            [
+                34910
+            ],
+            [
+                35904
+            ],
+            [
+                37636
+            ],
+            [
+                38849
+            ],
+            [
+                40305
+            ],
+            [
+                44590
+            ],
+            [
+                45062
+            ],
+            [
+                45976
+            ],
+            [
+                49977
+            ],
+            [
+                51991
+            ],
+            [
+                52761
+            ],
+            [
+                53376
+            ],
+            [
+                53922
+            ],
+            [
+                55944
+            ],
+            [
+                58770
+            ],
+            [
+                61008
+            ],
+            [
+                61948
+            ],
+            [
+                64451
+            ],
+            [
+                64477
+            ],
+            [
+                64861
+            ],
+            [
+                65165
+            ],
+            [
+                67314
+            ],
+            [
+                68199
+            ],
+            [
+                68753
+            ],
+            [
+                70162
+            ],
+            [
+                70655
+            ],
+            [
+                72207
+            ],
+            [
+                77032
+            ],
+            [
+                77406
+            ],
+            [
+                83085
+            ],
+            [
+                85858
+            ],
+            [
+                95514
+            ],
+            [
+                96258
+            ],
+            [
+                96402
+            ],
+            [
+                96531
+            ],
+            [
+                96761
+            ],
+            [
+                98806
+            ],
+            [
+                99994
+            ]
+        ],
+        "test_results": [
+            [
+                51991
+            ],
+            [
+                83085
+            ],
+            [
+                13355
+            ],
+            [
+                52761
+            ],
+            [
+                58770
+            ],
+            [
+                55944
+            ],
+            [
+                16034
+            ],
+            [
+                64451
+            ],
+            [
+                77406
+            ],
+            [
+                99994
+            ],
+            [
+                64861
+            ],
+            [
+                33456
+            ],
+            [
+                26240
+            ],
+            [
+                37636
+            ],
+            [
+                12698
+            ],
+            [
+                26148
+            ],
+            [
+                85858
+            ],
+            [
+                67314
+            ],
+            [
+                11891
+            ],
+            [
+                45976
+            ],
+            [
+                53376
+            ],
+            [
+                96761
+            ],
+            [
+                68199
+            ],
+            [
+                49977
+            ],
+            [
+                96258
+            ],
+            [
+                12800
+            ],
+            [
+                70655
+            ],
+            [
+                19002
+            ],
+            [
+                72207
+            ],
+            [
+                38849
+            ],
+            [
+                32701
+            ],
+            [
+                68753
+            ],
+            [
+                96531
+            ],
+            [
+                53922
+            ],
+            [
+                64477
+            ],
+            [
+                77032
+            ],
+            [
+                34910
+            ],
+            [
+                45062
+            ],
+            [
+                40305
+            ],
+            [
+                33060
+            ],
+            [
+                12396
+            ],
+            [
+                70162
+            ],
+            [
+                98806
+            ],
+            [
+                61008
+            ],
+            [
+                96402
+            ],
+            [
+                35904
+            ],
+            [
+                34579
+            ],
+            [
+                17729
+            ],
+            [
+                61948
+            ],
+            [
+                95514
+            ],
+            [
+                24829
+            ],
+            [
+                44590
+            ],
+            [
+                65165
+            ],
+            [
+                16532
+            ]
+        ],
+        "match": false,
+        "confidence_score": 0.9,
+        "execution_time": 0.0009989738464355469,
+        "generation_tokens": 844,
+        "judging_tokens": 205,
+        "generation_failed": false
+    },
+    {
+        "question": "Which good has \"70\" in its id? And what is its price?",
+        "generated": null,
+        "test": "SELECT id ,  price FROM goods WHERE id LIKE \"%70%\"",
+        "generated_results": [],
+        "test_results": [
+            [
+                "70-GA",
+                1.15
+            ],
+            [
+                "70-GON",
+                1.15
+            ],
+            [
+                "70-R",
+                1.09
+            ],
+            [
+                "70-LEM",
+                0.79
+            ],
+            [
+                "70-M-CH-DZ",
+                1.25
+            ],
+            [
+                "70-M-VA-SM-DZ",
+                1.15
+            ],
+            [
+                "70-MAR",
+                1.25
+            ],
+            [
+                "70-TU",
+                1.25
+            ],
+            [
+                "70-W",
+                0.79
+            ]
+        ],
+        "match": false,
+        "confidence_score": 1.0,
+        "execution_time": 0.0010001659393310547,
+        "generation_tokens": 643,
+        "judging_tokens": 167,
+        "generation_failed": true
+    },
+    {
+        "question": "What are the receipt numbers for instances where both cakes and cookies were purchased?",
+        "generated": null,
+        "test": "SELECT T1.receipt FROM items AS T1 JOIN goods AS T2 ON T1.item  =  T2.id WHERE T2.food  =  \"Cake\" INTERSECT SELECT T1.receipt FROM items AS T1 JOIN goods AS T2 ON T1.item  =  T2.id WHERE T2.food  =  \"Cookie\"",
+        "generated_results": [],
+        "test_results": [
+            [
+                12698
+            ],
+            [
+                12800
+            ],
+            [
+                13355
+            ],
+            [
+                16034
+            ],
+            [
+                16532
+            ],
+            [
+                17685
+            ],
+            [
+                21040
+            ],
+            [
+                26198
+            ],
+            [
+                29908
+            ],
+            [
+                34579
+            ],
+            [
+                40305
+            ],
+            [
+                53922
+            ],
+            [
+                55944
+            ],
+            [
+                61948
+            ],
+            [
+                62707
+            ],
+            [
+                64477
+            ],
+            [
+                65165
+            ],
+            [
+                67314
+            ],
+            [
+                68753
+            ],
+            [
+                70162
+            ],
+            [
+                70655
+            ],
+            [
+                72207
+            ],
+            [
+                77032
+            ],
+            [
+                86861
+            ],
+            [
+                95514
+            ],
+            [
+                96258
+            ],
+            [
+                96531
+            ],
+            [
+                96761
+            ]
+        ],
+        "match": false,
+        "confidence_score": 0.9,
+        "execution_time": 0.001001119613647461,
+        "generation_tokens": 996,
+        "judging_tokens": 202,
+        "generation_failed": true
+    },
+    {
+        "question": "What is the full name of the customer who visited on the earliest date?",
+        "generated": "SELECT CONCAT(FirstName, ' ', LastName) AS Full_Name\nFROM customers\nWHERE id = (SELECT CustomerId\n            FROM receipts\n            ORDER BY date\n            LIMIT 1)",
+        "test": "SELECT T1.FirstName ,  T1.LastName FROM customers AS T1 JOIN receipts AS T2 ON T1.id  =  T2.CustomerId ORDER BY T2.date LIMIT 1",
+        "generated_results": [
+            [
+                "JOSETTE SLINGLAND"
+            ]
+        ],
+        "test_results": [
+            [
+                "JOSETTE",
+                "SLINGLAND"
+            ]
+        ],
+        "match": false,
+        "confidence_score": 0.8,
+        "execution_time": 0.0010175704956054688,
+        "generation_tokens": 641,
+        "judging_tokens": 194,
+        "generation_failed": false
+    },
+    {
+        "question": "Give the last names of customers who have been to the bakery more than 10 times?",
+        "generated": "SELECT LastName FROM customers WHERE Id IN (SELECT CustomerId FROM receipts GROUP BY CustomerId HAVING COUNT(*) > 10);",
+        "test": "SELECT T2.LastName FROM receipts AS T1 JOIN customers AS T2 ON T1.CustomerId  =  T2.id GROUP BY T2.id HAVING count(*)  >  10",
+        "generated_results": [
+            [
+                "LOGAN"
+            ],
+            [
+                "SLINGLAND"
+            ],
+            [
+                "TOUSSAND"
+            ],
+            [
+                "HELING"
+            ],
+            [
+                "SOPKO"
+            ],
+            [
+                "CALLENDAR"
+            ],
+            [
+                "CRUZEN"
+            ],
+            [
+                "ZEME"
+            ]
+        ],
+        "test_results": [
+            [
+                "LOGAN"
+            ],
+            [
+                "SLINGLAND"
+            ],
+            [
+                "TOUSSAND"
+            ],
+            [
+                "HELING"
+            ],
+            [
+                "SOPKO"
+            ],
+            [
+                "CALLENDAR"
+            ],
+            [
+                "CRUZEN"
+            ],
+            [
+                "ZEME"
+            ]
+        ],
+        "match": true,
+        "confidence_score": 0.9,
+        "execution_time": 0.0010058879852294922,
+        "generation_tokens": 688,
+        "judging_tokens": 184,
+        "generation_failed": false
+    },
+    {
+        "question": "What is average price of goods whose flavor is blackberry or blueberry?",
+        "generated": "SELECT AVG(price) AS average_price\nFROM goods\nWHERE flavor IN ('blackberry', 'blueberry')",
+        "test": "SELECT avg(price) FROM goods WHERE flavor  =  \"Blackberry\" OR flavor  =  \"Blueberry\"",
+        "generated_results": [
+            [
+                null
+            ]
+        ],
+        "test_results": [
+            [
+                2.5500000000000003
+            ]
+        ],
+        "match": false,
+        "confidence_score": 1.0,
+        "execution_time": 0.0009992122650146484,
+        "generation_tokens": 400,
+        "judging_tokens": 176,
+        "generation_failed": false
+    },
+    {
+        "question": "Find the ids of customers whose average spending for each good is above 5.",
+        "generated": null,
+        "test": "SELECT T3.CustomerId FROM goods AS T1 JOIN items AS T2 ON T1.id  =  T2.item JOIN receipts AS T3 ON T2.receipt  =  T3.ReceiptNumber GROUP BY T3.CustomerId HAVING avg(T1.price)  >  5",
+        "generated_results": [],
+        "test_results": [
+            [
+                4
+            ],
+            [
+                10
+            ]
+        ],
+        "match": false,
+        "confidence_score": 0.9,
+        "execution_time": 0.0,
+        "generation_tokens": 673,
+        "judging_tokens": 180,
+        "generation_failed": true
+    },
+    {
+        "question": "What are the ids with apple flavor?",
+        "generated": "SELECT Id\nFROM goods\nWHERE Flavor = \"Apple\"",
+        "test": "SELECT id FROM goods WHERE flavor  =  \"Apple\"",
+        "generated_results": [
+            [
+                "90-APIE-10"
+            ],
+            [
+                "90-APP-11"
+            ],
+            [
+                "50-APP"
+            ],
+            [
+                "51-APP"
+            ]
+        ],
+        "test_results": [
+            [
+                "90-APIE-10"
+            ],
+            [
+                "90-APP-11"
+            ],
+            [
+                "50-APP"
+            ],
+            [
+                "51-APP"
+            ]
+        ],
+        "match": true,
+        "confidence_score": 1.0,
+        "execution_time": 0.0010006427764892578,
+        "generation_tokens": 622,
+        "judging_tokens": 159,
+        "generation_failed": false
+    },
+    {
+        "question": "What are the ids of goods whose price is above twice the average price of all goods?",
+        "generated": "SELECT Id\nFROM goods\nWHERE Price > (2 * (SELECT AVG(Price) FROM goods))",
+        "test": "SELECT id FROM goods WHERE price  >  (SELECT avg(price) FROM goods)",
+        "generated_results": [
+            [
+                "20-BC-C-10"
+            ],
+            [
+                "20-BC-L-10"
+            ],
+            [
+                "20-CA-7.5"
+            ],
+            [
+                "24-8x10"
+            ],
+            [
+                "25-STR-9"
+            ],
+            [
+                "26-8x10"
+            ],
+            [
+                "46-11"
+            ]
+        ],
+        "test_results": [
+            [
+                "20-BC-C-10"
+            ],
+            [
+                "20-BC-L-10"
+            ],
+            [
+                "20-CA-7.5"
+            ],
+            [
+                "24-8x10"
+            ],
+            [
+                "25-STR-9"
+            ],
+            [
+                "26-8x10"
+            ],
+            [
+                "46-11"
+            ],
+            [
+                "90-APIE-10"
+            ]
+        ],
+        "match": false,
+        "confidence_score": 1.0,
+        "execution_time": 0.0009989738464355469,
+        "generation_tokens": 565,
+        "judging_tokens": 178,
+        "generation_failed": false
+    }
+]
